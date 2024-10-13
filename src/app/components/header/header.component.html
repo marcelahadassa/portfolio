@@ -1,19 +1,22 @@
-<header class="bg-white">
-    <nav class="py-11 px-28">
-        <div class="flex justify-between items-center flex-row">
-            <a href="/">
-                <img src="/logo-light-mode.svg" alt="Logo"
-                    class="w-22 h-22"></a>
-                    <i class="fa-solid fa-bars"></i>
-            <div>
-                <a href="/#about"
-                    class="text-gray-600 hover:text-gray-900 px-4">Sobre</a>
-                <a href="/#resume"
-                    class="text-gray-600 hover:text-gray-900 px-4">Formação e
-                    experiência</a>
-                <a href="/#projetos"
-                    class="text-gray-600 hover:text-gray-900 px-4">Projetos e habilidades</a>
+<header>
+    <nav class="w-full fixed top-0 bg-white shadow-shape">
+        <div
+            class="container mx-auto py-2 flex justify-between items-center flex-row">
+            <div class="mt-3">
+                <img (click)="scrollTo('home')" src="/logo-light-mode.svg"
+                    alt="Logo"
+                    class="w-22 h-22">
             </div>
+            <ul class="hidden md:flex space-x-10 text-sm text-gray-600">
+                <li (click)="scrollTo('about')"
+                    class=" hover:text-gray-900">Sobre</li>
+                <li (click)="scrollTo('projects')"
+                    class=" hover:text-gray-900">Projetos e habilidades</li>
+                <li (click)="scrollTo('resume')"
+                    class=" hover:text-gray-900">Formação e experiência</li>
+                <li (click)="scrollTo('contact')"
+                    class=" hover:text-gray-900">Contato</li>
+            </ul>
         </div>
     </nav>
 </header>
